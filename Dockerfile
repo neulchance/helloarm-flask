@@ -1,4 +1,4 @@
-FROM python:3.8-alpine as base
+FROM arm32v6/python:3 as base
 FROM base as builder
 
 RUN mkdir /install
