@@ -5,7 +5,7 @@ RUN mkdir /install
 WORKDIR /install
 
 COPY requirements.txt /requirements.txt
-RUN pip install --install-option="--prefix=/install" -r /requirements.txt
+RUN pip install --no-cache-dir --prefix=/install -r /requirements.txt
 
 FROM base
 
