@@ -1,4 +1,4 @@
-FROM arm32v6/python:3 as base
+FROM python:3.8.1-alpine3.11 as base
 FROM base as builder
 
 RUN mkdir /install
@@ -13,6 +13,8 @@ COPY --from=builder /install /usr/local
 COPY src /app
 
 WORKDIR /app
+
+EXPOSE 5000
 
 ENTRYPOINT [ "python" ]
 CMD [ "hello.py" ]
