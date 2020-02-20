@@ -14,7 +14,6 @@ COPY src /app
 
 WORKDIR /app
 
-EXPOSE 80
-
 ENTRYPOINT [ "python" ]
 CMD [ "hello.py" ]
+EXPOSE 80
